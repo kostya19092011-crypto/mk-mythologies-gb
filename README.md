@@ -1,22 +1,23 @@
 # MK Mythologies: Sub-Zero (Game Boy DMG prototype)
 
-This repository contains a compact Game Boy Original (DMG) tech demo inspired by Mortal Kombat Mythologies: Sub-Zero. It is not a full commercial conversion of the original game; instead, it is a lightweight playable prototype built around the limitations of the original Game Boy hardware.
+This repository contains a lightweight Game Boy Original (DMG) prototype inspired by Mortal Kombat Mythologies: Sub-Zero. It is intentionally simplified to fit the graphical and technical limits of the original hardware.
 
-## What is included
+## Features
 
-- Side-scrolling arena layout
-- Player movement with left/right controls
-- Jumping and basic attack behavior
-- Enemy AI that advances toward the hero
+- 2D fight arena on a single screen
+- Player movement and jumping
+- Enemy pursuit AI
 - Ice projectile attack
-- Simple health system
-- GBDK-2020 build setup
+- Health tracking
+- Title intro and restart loop
+- Built for GBDK-2020
 
-## Build requirements
+## Controls
 
-- GBDK-2020
-- GNU Make
-- A Game Boy emulator or flash cart for testing
+- D-pad: move
+- A: throw ice blast
+- B: jump
+- START: return to title screen after game over / victory
 
 ## Build
 
@@ -24,21 +25,8 @@ This repository contains a compact Game Boy Original (DMG) tech demo inspired by
 make
 ```
 
-This produces a DMG ROM in the `build/` folder.
-
-## Controls
-
-- D-pad: move
-- A: ice projectile
-- B: jump
+The ROM will be generated in `build/`.
 
 ## Notes
 
-This project is intentionally small and optimized for a Game Boy DMG target. The goal is to preserve the feel of a fast 2D arena fighter on very limited hardware rather than trying to reproduce the entire PS1-era production in a single ROM.
-
-## File layout
-
-```text
-src/main.c   Game logic and rendering
-Makefile     GBDK build configuration
-```
+This is a compact gameplay demo rather than a full conversion. The original Game Boy has no sprite scaling, limited VRAM, and very constrained CPU power, so the project focuses on the feel and iconography of Sub-Zero rather than trying to reproduce the full PS1 game.
